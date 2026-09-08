@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111a2c" />
+  <meta name="description" content="Петербургский подарок ко дню рождения — 10–13 сентября 2026" />
+  <title>Твой Петербург</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <main>
+    <section id="gate" class="gate-shell" aria-labelledby="gate-title">
+      <div class="gate-date" aria-hidden="true">12 · 09</div>
+      <div class="gate-card">
+        <p class="eyebrow">Санкт-Петербург · сентябрь 2026</p>
+        <div class="ornament">✦</div>
+        <h1 id="gate-title">Твой Петербург</h1>
+        <p class="gate-lead">Впереди маленькое приключение</p>
+        <form id="password-form" class="password-form">
+          <label for="password">Пароль</label>
+          <div class="password-row">
+            <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+            <button type="submit">Открыть</button>
+          </div>
+          <p id="password-message" class="password-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="quest" class="quest hidden" aria-hidden="true">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">10–13 сентября · Санкт-Петербург</p>
+          <br>
+          <h1>Впереди приключение<br><em>и самый важный день.</em></h1>
+          <div class="birthday-countdown" id="birthday-countdown"></div>
+        </div>
+      </header>
+
+      <section class="packing-section" id="packing">
+        <div class="section-heading">
+          <p class="eyebrow">Перед поездкой</p>
+          <h2>Памятка для путешественницы</h2>
+          <p id="packing-intro" class="section-lead"></p>
+        </div>
+        <div id="packing-grid" class="packing-grid"></div>
+        <p id="packing-note" class="packing-note"></p>
+      </section>
+
+      <section class="days-section">
+        <div class="section-heading">
+          <p class="eyebrow">Главы</p>
+          <h2>Каждое утро — новый день</h2>
+          <!-- <p class="section-lead">Не нужно заглядывать дальше. Когда придёт время, нужная карточка откроется сама.</p> -->
+        </div>
+        <div id="days-grid" class="days-grid"></div>
+      </section>
+
+      <footer>
+        <span>Санкт-Петербург · 2026</span>
+        <span>Собрано вокруг тебя Катя</span>
+      </footer>
+    </section>
+  </main>
+
+  <dialog id="day-dialog" class="day-dialog">
+    <button id="dialog-close" class="dialog-close" aria-label="Закрыть">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
